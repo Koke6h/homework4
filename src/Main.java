@@ -20,7 +20,7 @@ public class Main {
         System.out.println("Задача 3");
         int speed = 40;
         System.out.println("Если скорость" + speed + ", то");
-        if (speed > 60 && speed < 60) {
+        if (speed > 60) {
             System.out.println("Придется заплатить штраф");
         } else {
             System.out.println("Можно ездить спокойно");
@@ -42,27 +42,24 @@ public class Main {
         }
         System.out.println("Задача 5");
         int children = 12;
-        boolean older = false;
         System.out.println("Если возраст ребенка равен"+children+", то ему");
-        System.out.println("");
         if (children < 5) {
-            System.out.println("то он не может кататься на аттракционе.");
+            System.out.println("можно кататься на аттракционе.");
         } else if (children < 14) {
-            if (older){
-                System.out.println("Кататься можно");
-            } else {
-                System.out.println("кататься нельзя");
-            }
-        } else {
-            System.out.println("он может кататься без сопровождения взрослого");
+                System.out.println("можно кататься только в сопровождения взрослого");
+        } else if (children>17){
+            System.out.println("можно кататься без сопровождения взрослого");
+        } else{
+            System.out.println("кататься нельзя");
         }
         System.out.println("Задача 6");
         int humanInTrain = 74;
         int seatPlace = 60;
         int plase =102;
-        if(humanInTrain>seatPlace || humanInTrain<plase){
-            System.out.println("Сидячих мест нет, но есть стоячие");
-        }else {
+        int standPlace = plase - humanInTrain;
+        if(humanInTrain>seatPlace && humanInTrain<plase){
+            System.out.println("Сидячих мест нет, но есть стоячие"+standPlace);
+        }else{
             System.out.println("мест нет");
         }
         System.out.println("Задача 7");
@@ -71,7 +68,6 @@ public class Main {
         int three =3;
         boolean oneIsBiggest = one>two && one>three;
         boolean twoIsBiggest = two>one && two>three;
-        boolean threeIsBiggest = three>one && three>two;
         if (oneIsBiggest) {
             System.out.println("Число один - наибольшее из всех");
         } else if (twoIsBiggest) {
