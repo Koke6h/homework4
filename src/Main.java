@@ -66,13 +66,14 @@ public class Main {
         int one =1;
         int two = 2;
         int three =3;
-        boolean oneIsBiggest = one>two && one>three;
-        boolean twoIsBiggest = two>one && two>three;
-        if (oneIsBiggest) {
+        if (one>two && one>three && one!=two && one!= three) {
             System.out.println("Число один - наибольшее из всех");
-        } else if (twoIsBiggest) {
+        } else if (two>one && two>three && two!= one
+        && two != three) {
             System.out.println("Число два - наибольшее из всех");
-        }else {
+        }else if(three> one && three>two && three != one && three != two) {
             System.out.println("Число три - наибольшее из всех");
+        } else {
+            System.out.println("ошибка");
         }
     }}
